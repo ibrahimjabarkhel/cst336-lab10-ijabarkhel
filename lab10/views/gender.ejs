@@ -1,0 +1,37 @@
+<%- include ./partials/header %>
+
+
+<div class='container'>
+    <div class='jumbotron'>
+        <h1 style='text-align:center;'> SEARCH POPULAR QUOTES BY GENDER OF AUTHOR</h1>
+            <form action='/quotesByGender' method='GET'>
+                <div class='form-group row'>
+                    <div class='col-sm-4'>
+                        <h3 class='col-sm-4'> Select Gender</h3>
+                    </div>
+                    <div class='col-sm-4'>
+                        <select id="gender" name="gender">
+                            <option value="">Select One</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                
+                <div class='form-group row'>
+                    <div class='col-sm-3'></div>
+                    <div class='col-sm-6'>
+                        <button class='btn btn-primary btn-block'>Search Quotes By Gender</button>
+                    </div>
+                    <div class='col-sm-3'></div>
+                </div>
+                
+            </form>
+    </div>
+    
+    
+    
+</div>
+
+<%- include ./partials/footer %>

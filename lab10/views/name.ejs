@@ -1,0 +1,34 @@
+<%- include ./partials/header %>
+
+
+        <div class='container'>
+            <div class='jumbotron'>
+                <h1 style='text-align:center;'> POPULAR QUOTES </h1>
+                <form action='/quotesByName' method='GET'>
+                    <div class='form-group row'>
+                        <label for='firstname' class='col-sm-4 col-from-label'>First Name</label>
+                        <div class='col-sm-4'>
+                            <input type='text' class='form-control' id='firstname' name='firstName'>
+                        </div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='lastname' class='col-sm-4 col-from-label'>Last Name</label>
+                        <div class='col-sm-4'>
+                            <input type='text' class='form-control' id='lastname' name='lastName'>
+                        </div>
+                    </div>
+                    <div class='form-group row'>
+                        <div class='col-sm-4'></div>
+                        <div class='col-sm-4'>
+                            <button class='btn btn-primary btn-block'>Search Author </button>
+                        </div>
+                        <div class='col-sm-4'></div>
+                    </div>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+
+<%- include ./partials/footer %>

@@ -1,0 +1,44 @@
+<%- include ./partials/header %>
+
+
+<div class='container'>
+    <div class='jumbotron'>
+        <h1> Found <%=keyword%> Quotes </h1>
+        <div class='row'>
+            <div class='col-sm-4'></div>
+            <button class='col-sm-4 btn btn-info btn-block' onclick='location.href="/";'>Search Again</button>
+            <div class='col-sm-4'></div>
+        </div>
+    </div>
+    
+    <%if (name==null){%>
+        <%quotes.forEach(function(q){%>
+                <%var firstName = q.firstName;%>
+                <%var lastName = q.lastName;%>
+                <form action='/author' method='GET'>
+                    <div class='form-group row'>
+                        <div class='col-sm-6'>
+                            By: <button class='col-sm-6 col-from-label' style="color:black; background-color: grey">  <%=q.firstName%> <%=q.lastName%> </button>
+                        </div>
+                        <div class='col-sm-4'></div>
+                        <input type="text" id="getID" name="firstName" style="display: none" value="<%=firstName%>">
+                        <input type="text" id="getID" name="lastName" style="display: none" value="<%=lastName%>">
+                    </div>
+                </form>
+            <h5><li> <%=q.quote%>  </li></h5>
+            <br>
+        <%});%>
+    <%}
+    else{%>    
+        <ul>
+            <%quotes.forEach(function(q){%>
+                <h5><li> <%=q.quote%>  </li></h5>
+            <%});%>
+        </ul>
+    <%}%>
+</div>
+
+
+<%- include ./partials/footer %>
+
+
