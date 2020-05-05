@@ -1,0 +1,57 @@
+<%- include ./partials/header %>
+
+    <div class='container text-center'>
+    	<div class='jumbotron'>
+    	    <div class="row">
+    	        <div class="col-sm-5">
+        		    <h3> Admin Log In </h3>
+        		    <a class='btn btn-primary' class="nav-link" href='/login'>Log In</a>
+        		</div>
+        		<div class="col-sm-5">
+        		    <h3> Register Admin </h3>
+        		    <a class='btn btn-primary' class="nav-link" href='/register'>Register</a>
+        		</div>
+        	</div>
+    	</div>
+    </div>
+    
+    <div class='container'>
+        <div class='jumbotron'>
+            <h1 style='text-align:center;'> Choose Search Method </h1>
+            <form action='/name' method='GET'>
+                <div class='row'>
+                    <div class='col-sm-3'></div>
+                    <button for='name' class='col-sm-6 col-from-label' style="color:black; background-color: grey">Search Quotes By Full Name</button>
+                    <div class='col-sm-3'></div>
+                </div>
+            </form>
+            <br> 
+            <form action='/category' method='GET'>
+                <div class='row'>
+                    <div class='col-sm-3'></div>
+                    <button for='category' class='col-sm-6 col-from-label' style="color:black; background-color: blue">Search  Quotes By Category</button>
+                    <div class='col-sm-3'></div>
+                </div>
+            </form>
+            <br>    
+            <form action='/gender' method='GET'>
+                <div class='row'>
+                    <div class='col-sm-3'></div>
+                    <button for='gender' class='col-sm-6 col-from-label' style="color:black; background-color: green">Search  Quotes By Gender</button>
+                    <div class='col-sm-3'></div>
+                </div>
+            </form>
+            <br>
+            <form action='/keyword' method='GET'>
+                <div class='row'>
+                    <div class='col-sm-3'></div>
+                    <button for='keyword' class='col-sm-6 col-from-label' style="color:black; background-color: red">Search  Quotes By Keyword</button>
+                    <div class='col-sm-3'></div>
+                </div>
+            </form>
+            
+        </div>
+        
+    </div>
+
+<%- include ./partials/footer %>

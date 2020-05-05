@@ -1,0 +1,29 @@
+to start sql server:
+    sudo service mysqld start
+to stop sql server:
+    sudo service mysqld stop
+    
+access mysql as a root user:
+    mysql -u root -p (just enter for password)
+    
+add yourself as a user to sql:
+    create user 'ijabarkhel'@'localhost' identified by 'sql747@';
+
+for giving information to this new user:
+    grant all privileges on * . * to 'ijabarkhel'@'localhost';
+
+to add quotes-db.sql in lab9/sql into databases quotes_db;
+    mysql -p -u ijabarkhel quotes_db < lab9/sql/quotes-db.sql
+    mysql -p -u ijabarkhel gems_db < sql/gems.sql
+    
+to use database:
+    use databaseName;
+    
+to export sql file: 
+mysqldump -h "0.0.0.0" -u "ijabarkhel" -p"sql747@" "quotes_db" > export.sql
+
+to import sql into heroku:
+mysql -h "un0jueuv2mam78uv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com" -u "plv978x2lb5fojba" -p"ekrsow448x5imx08" "gbxlu3vil2g19bjb" < export.sql
+
+to import sql to clear-db mysql heroku:
+mysql -h "us-cdbr-iron-east-01.cleardb.net" -u "b351170816a0b9" -p"5f55028e" "heroku_4840a4f6d228855" < export.sql

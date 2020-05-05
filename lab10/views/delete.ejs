@@ -1,0 +1,20 @@
+<%- include ./partials/header %>
+
+    <div class='container text-center'>
+        <div class="jumbotron">
+            <div><h1> Are You Sure?</h1></div>
+            <div><h4> Are you sure you want to delete the author <%=firstname%> <%=lastname%>? This cannot be undone</h4></div>
+            
+            <form action='/author/<%=authorId%>/delete' method='GET'>
+                <div class='form-group row'>
+        			<div class='col-sm-6'>
+        			    <button class='btn btn-primary btn-block' style="color: green;">NO, CANCEL</button>
+        			</div>
+        			<div class='col-sm-6'>
+        				<button class='btn btn-primary btn-block' style="color: red;">YES, DELETE</button>
+        			</div>
+        		</div>
+        	</form>
+        </div>
+    </div>
+<%- include ./partials/footer %>
